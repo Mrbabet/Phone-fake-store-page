@@ -72,6 +72,46 @@ header .wrapper {
     display: none;
   }
 }
+.categories-menu .wrapper {
+  padding: 32px;
+}
+.categories-heading {
+  text-align: center;
+  font-size: 40px;
+}
+.categories-btn-container {
+  margin: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.categories-btn-container button {
+  background-color: transparent;
+  border: 0;
+  padding: 7px 18px;
+  border-radius: 5px;
+  transition: all 300ms ease-in-out;
+}
+.categories-btn-container button:hover {
+  background-color: black;
+  color: #ffa31a;
+  /* Add active class to this  */
+}
+.products .wrapper {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1;
+  justify-items: center;
+}
+.product-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
 @media screen and (min-width: 1025px) {
   .menu-btn {
     display: none;
