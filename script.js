@@ -23,14 +23,11 @@ const renderProducts = function (items) {
     const newProduct = document.createElement("div");
     newProduct.className = `product-item ${items[i].sale ? "on-sale" : ""}`;
     newProduct.innerHTML = `<img src="${items[i].image}" />
-    <p class="product-name">Huawei p20</p>
-    <p class="product-description">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, omnis
-      culpa? Repellat rem soluta non nisi quasi alias illum excepturi?
-    </p>
+    <p class="product-name">${items[i].name}</p>
+    <p class="product-description"> ${items[i].description}</p>
     <div class="product-price">
-      <span class="price">2999.99zł</span>
-      <span class="price-sale">2799.99zł</span>
+      <span class="price">${items[i].price}zł</span>
+      <span class="price-sale">${items[i].price - items[i].saleAmount}zł</span>
     </div>
     <button class="add-to-cart-btn">Dodaj do koszyka</button>`;
 
@@ -39,3 +36,4 @@ const renderProducts = function (items) {
 };
 
 document.onload = renderProducts(currentProducts);
+document.onload = renderCategories(currentProducts);
