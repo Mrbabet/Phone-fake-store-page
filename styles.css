@@ -96,7 +96,10 @@ header .wrapper {
 .categories-btn-container button:hover {
   background-color: black;
   color: #ffa31a;
-  /* Add active class to this  */
+}
+.categories-btn-container button.active {
+  background-color: black;
+  color: #ffa31a;
 }
 .products .wrapper {
   padding: 32px;
@@ -176,6 +179,23 @@ header .wrapper {
   color: black;
   font-size: 16px;
   position: relative;
+}
+.product-item-sale-info {
+  display: none;
+  position: absolute;
+  transform: translate(100px, -35px);
+  background: black;
+  color: #ffa31a;
+  padding: 5px 15px;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+img {
+  position: relative;
+}
+
+.product-item.on-sale .product-item-sale-info {
+  display: block;
 }
 
 .product-item.on-sale .price {
