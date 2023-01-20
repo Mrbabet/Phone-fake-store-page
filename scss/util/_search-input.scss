@@ -1,0 +1,36 @@
+.input-container {
+  margin: 16px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  input {
+    width: 100%;
+    padding-left: 16px;
+    border: 0;
+  }
+}
+
+.input-container-desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .input-container-desktop {
+    margin: 16px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    width: 40%;
+    input {
+      width: 100%;
+      padding-left: 16px;
+      border: 0;
+    }
+    img {
+      background-color: white;
+    }
+    .mobile-input-container {
+      display: none;
+    }
+  }
+}
