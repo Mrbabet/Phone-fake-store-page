@@ -11,15 +11,6 @@ const products = [
     saleAmount: 200,
   },
   {
-    id: 1,
-    name: "Iphone 13",
-    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-    dolores eaque. Eligendi ab officia minus.`,
-    category: "Iphone",
-    price: 5200.99,
-    image: "./images/iphone-13.jpg",
-  },
-  {
     id: 2,
     name: "Iphone 12",
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
@@ -30,6 +21,16 @@ const products = [
     sale: true,
     saleAmount: 451,
   },
+  {
+    id: 1,
+    name: "Iphone 13",
+    description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+    dolores eaque. Eligendi ab officia minus.`,
+    category: "Iphone",
+    price: 5200.99,
+    image: "./images/iphone-13.jpg",
+  },
+
   {
     id: 3,
     name: "Huawei p50 pro",

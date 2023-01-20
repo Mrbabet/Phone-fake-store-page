@@ -19,6 +19,7 @@ let categories = new Set();
 
 const productsSection = document.querySelector(".products .wrapper ");
 
+// Render products function
 const renderProducts = function (items) {
   productsSection.innerHTML = "";
   for (let i = 0; i < items.length; i++) {
@@ -38,6 +39,7 @@ const renderProducts = function (items) {
   }
 };
 
+// render categories function
 const renderCategories = function (items) {
   for (let i = 0; i < items.length; i++) {
     categories.add(items[i].category);
@@ -62,8 +64,10 @@ document.onload = renderCategories(currentProducts);
 const categoriesButtons = document.querySelectorAll(
   ".categories-btn-container button"
 );
+
+// Event listeners
 categoriesButtons.forEach((btn) =>
-  btn.addEventListener("click", (e) => {
+  btn.addEventListener("click", function (e) {
     const category = e.target.dataset.category;
     categoriesButtons.forEach((btn) => btn.classList.remove("active"));
     e.target.classList.add("active");
@@ -77,7 +81,29 @@ categoriesButtons.forEach((btn) =>
       );
     }
 
-    console.log(currentProducts);
     renderProducts(currentProducts);
+  })
+);
+const searchBarInput = document.querySelectorAll("input");
+
+searchBarInput.forEach((input) =>
+  input.addEventListener("input", function (e) {
+    const search = e.target.value;
+
+    const filteredProducts = currentProducts.filter((product) => {
+      if (product.name.toLowerCase().includes(search.toLowerCase())) {
+        return product;
+      }
+    });
+    const emptyState = document.querySelector(".empty-state");
+
+    console.log(filteredProducts);
+    if (filteredProducts.length === 0) {
+      emptyState.classList.add("active");
+    } else {
+      emptyState.classList.remove("active");
+    }
+
+    renderProducts(filteredProducts);
   })
 );
