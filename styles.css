@@ -129,9 +129,7 @@ header .wrapper {
     display: flex;
   }
   .categories-menu {
-    padding: 24px 64px 0px 32px;
-
-    border-right: 1px solid black;
+    padding: 20px 64px 0px 32px;
   }
   .categories-btn-container {
     flex-wrap: nowrap;
